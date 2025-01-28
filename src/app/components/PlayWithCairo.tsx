@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import { type Call } from "starknet";
 import { useContract, useReadContract, useSendTransaction } from '@starknet-react/core';
-import TransactionStatus from '../Transaction/TransactionStatus';
-import { test1Abi } from "../../../contracts/abis/counter-abi";
+import TransactionStatus from './TransactionStatus';
+import { test1Abi } from "../contracts/counter-abi";
 import { addrTestContract, qtyForIncrease } from '@/app/utils/constants';
 
 

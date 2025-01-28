@@ -1,7 +1,8 @@
-import { StarknetProvider } from './components/client/Starknet-provider'
+import type { Metadata } from "next";
+import { StarknetProvider } from './components/Starknet-provider'
 import './globals.css'
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Starknet-counter-DAPP',
   description: 'Minimalistic DAPP using Starknet',
   icons: {
@@ -11,9 +12,9 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>

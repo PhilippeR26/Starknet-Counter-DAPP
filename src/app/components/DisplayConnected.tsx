@@ -2,8 +2,8 @@
 
 import { constants } from "starknet";
 import { useAccount, useNetwork } from "@starknet-react/core";
-import ConnectWallet from "./ConnectWallet/ConnectWallet";
-import PlayWithCairo from "./Contract/PlayWithCairo";
+import ConnectWallet from "./ConnectWallet";
+import PlayWithCairo from "./PlayWithCairo";
 
 
 export function DisplayConnected() {

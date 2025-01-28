@@ -5,8 +5,8 @@ import * as CSS from 'csstype';
 import "./custom.css";
 
 import starknetReactImg from "./Images/starknet-logo.svg";
-import { DisplayConnected } from './components/client/DisplayConnected';
-import LowerBanner from './components/client/LowerBanner';
+import { DisplayConnected } from './components/DisplayConnected';
+import LowerBanner from './components/LowerBanner';
 
 export default async function Page() {
     const align: "left" | "center" | "right" = "center";
@@ -30,11 +30,10 @@ export default async function Page() {
                         height={40}
                     />
                 </div>
-                counter APP
+                counter-DAPP
             </div>
             <div className="textStyle">
                 Please connect to Sepolia Testnet network
-                
             </div>
             <DisplayConnected></DisplayConnected>
                 
