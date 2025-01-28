@@ -1,4 +1,4 @@
-export const test1Abi = [
+export const counterAbi = [
   {
     "type": "impl",
     "name": "TestSession",

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { type Call } from "starknet";
 import { useContract, useReadContract, useSendTransaction } from '@starknet-react/core';
 import TransactionStatus from './TransactionStatus';
-import { test1Abi } from "../contracts/counter-abi";
+import { counterAbi } from "../contracts/counter-abi";
 import { addrTestContract, qtyForIncrease } from '@/app/utils/constants';
 
 
@@ -12,11 +12,11 @@ export default function PlayWithCairo() {
     const [transactionHash, setTransactionHash] = useState<string>("");
     const [getCounter, setCounter] = useState<bigint | undefined>(undefined);
 
-    const { contract } = useContract({ abi: test1Abi, address: addrTestContract });
-    const { sendAsync, data, status, isSuccess } = useSendTransaction({ calls: [] });
+    const { contract } = useContract({ abi: counterAbi, address: addrTestContract });
+    const { sendAsync } = useSendTransaction({ calls: [] });
     const { data: counter } = useReadContract({
         address: addrTestContract,
-        abi: test1Abi,
+        abi: counterAbi,
         functionName: "get_counter",
         args: [],
         // watch: true, // refreshed each block, or `refetchInterval`
